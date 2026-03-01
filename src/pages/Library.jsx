@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { specimens } from '../data/specimens';
 import './Library.css';
 import bugIcon from '../svgs/bug.svg';
-import SpecimenDetail from '../components/SpecimenDetail';
+import FichaTecnica from '../components/FichaTecnica';
 
 function Library() {
   const [selectedSpecimen, setSelectedSpecimen] = useState(null);
@@ -105,9 +105,9 @@ function Library() {
         ))}
       </div>
 
-      <SpecimenDetail 
-        specimen={selectedSpecimen} 
-        onClose={() => setSelectedSpecimen(null)} 
+      <FichaTecnica
+        specimen={selectedSpecimen}
+        onClose={() => setSelectedSpecimen(null)}
       />
     </div>
   );

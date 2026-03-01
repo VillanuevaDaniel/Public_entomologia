@@ -1,9 +1,15 @@
 :root {
-  --accent-color: #2E7D32;
-  --accent-color-light: #E8F5E9;
-  --accent-color-hover: #1B5E20;
-  --accent-color-dark-bg: rgba(46, 125, 50, 0.2);
-  --mint-color: #69F0AE;
+  --accent-color: #C48200;
+  --accent-color-light: #FFF3E0;
+  --accent-color-hover: #A86F00;
+  --accent-color-dark-bg: rgba(196, 130, 0, 0.2);
+  --mint-color: #FFC107;
+}
+
+.dark-mode {
+  --accent-color: #FFB100;
+  --accent-color-hover: #E09E00;
+  --accent-color-dark-bg: rgba(255, 177, 0, 0.2);
 }
 
 * {
@@ -13,8 +19,8 @@
 }
 
 body {
-  background: #FFFFF0;
-  color: #000000;
+  background: #F8F9FA;
+  color: #2C3E50;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   font-size: 15px;
   line-height: 1.6;
@@ -23,8 +29,8 @@ body {
 }
 
 .dark-mode body {
-  background: #1A1D23;
-  color: #FFFFF0;
+  background: #121212;
+  color: #E0E0E0;
 }
 
 ::-webkit-scrollbar {
@@ -32,15 +38,15 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-  background: #F5F5F5;
+  background: #F0F1F3;
 }
 
 .dark-mode ::-webkit-scrollbar-track {
-  background: #1a1a1a;
+  background: #0D0D0D;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #E0E0E0;
+  background: #CED4DA;
   border-radius: 5px;
 }
 
@@ -49,7 +55,7 @@ body {
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #D0D0D0;
+  background: #ADB5BD;
 }
 
 .dark-mode ::-webkit-scrollbar-thumb:hover {
@@ -59,20 +65,21 @@ body {
 .database-page,
 .gallery-page {
   margin-left: 80px;
-  background: #FFFFF0;
+  background: #F8F9FA;
   min-height: 100vh;
   transition: background 0.3s ease;
 }
 
 .dark-mode .database-page,
 .dark-mode .gallery-page {
-  background: #1A1D23;
+  background: #121212;
 }
 
 @media (max-width: 768px) {
   .database-page,
   .gallery-page {
-    margin-left: 60px;
+    margin-left: 0;
+    padding-bottom: 72px;
   }
 }
 
@@ -82,7 +89,7 @@ body {
 
 .modern-header h3 {
   font-size: 0.75rem;
-  color: #555555;
+  color: #5F6368;
   letter-spacing: 0.1em;
   margin-bottom: 8px;
   font-weight: 500;
@@ -90,44 +97,44 @@ body {
 }
 
 .dark-mode .modern-header h3 {
-  color: #FFFFF0;
+  color: #A0A0A0;
 }
 
 .modern-header h2 {
   font-size: 1.75rem;
-  color: #000000;
+  color: #2C3E50;
   margin-bottom: 12px;
   font-weight: 600;
   letter-spacing: -0.02em;
 }
 
 .dark-mode .modern-header h2 {
-  color: #FFFFF0;
+  color: #E0E0E0;
 }
 
 .section-description {
   font-size: 0.9rem;
-  color: #333333;
+  color: #5F6368;
   line-height: 1.6;
   max-width: 600px;
 }
 
 .dark-mode .section-description {
-  color: #FFFFF0;
+  color: #A0A0A0;
 }
 
 .brutal-input,
 .brutal-select {
   padding: 12px 16px;
-  background: #fafaec;
-  border: 1px solid #C0C0C0;
+  background: #FFFFFF;
+  border: 1px solid #DEE2E6;
   border-radius: 8px;
   font-family: inherit;
   font-size: 0.9rem;
-  color: #000000;
+  color: #2C3E50;
   transition: all 0.2s ease;
   outline: none;
-  appearance: none; 
+  appearance: none;
 }
 
 .brutal-select {
@@ -144,33 +151,33 @@ body {
 
 .brutal-input:hover,
 .brutal-select:hover {
-  background: #eeeee0;
+  background: #F0F1F3;
   border-color: var(--accent-color);
 }
 
 .brutal-input:focus,
 .brutal-select:focus {
-  background: #ffffff;
+  background: #FFFFFF;
   border-color: var(--accent-color);
   box-shadow: 0 0 0 3px var(--accent-color-dark-bg);
 }
 
 .dark-mode .brutal-input,
 .dark-mode .brutal-select {
-  background: #22252B;
+  background: #1E1E1E;
   border-color: #333333;
-  color: #FFFFF0;
+  color: #E0E0E0;
 }
 
 .dark-mode .brutal-input:hover,
 .dark-mode .brutal-select:hover {
-  background: #2F3943;
+  background: #2A2A2A;
   border-color: var(--accent-color);
 }
 
 .dark-mode .brutal-input:focus,
 .dark-mode .brutal-select:focus {
-  background: #1A1D23;
+  background: #121212;
   border-color: var(--accent-color);
-  box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.4);
+  box-shadow: 0 0 0 3px rgba(255, 193, 7, 0.4);
 }

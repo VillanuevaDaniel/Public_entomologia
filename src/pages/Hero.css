@@ -5,7 +5,7 @@
   justify-content: center;
   align-items: center;
   padding: 80px 0;
-  background: #FFFFF0;
+  background: #F8F9FA;
   margin-left: 80px;
   transition: background 0.3s ease;
   overflow-x: hidden;
@@ -13,7 +13,7 @@
 }
 
 .dark-mode .hero-section {
-  background: #1A1D23;
+  background: #121212;
 }
 
 .hero-content {
@@ -29,13 +29,13 @@
   font-size: 3.7rem;
   font-weight: 600;
   margin: 0 0 16px 0;
-  color: #000000;
+  color: #2C3E50;
   letter-spacing: -0.02em;
   transition: color 0.3s ease;
 }
 
 .dark-mode .hero-content h1 {
-  color: #FFFFF0;
+  color: #E0E0E0;
 }
 
 .hero-description {
@@ -59,11 +59,12 @@
   position: relative;
   left: 50%;
   right: 50%;
-  
   padding: 20px 0;
   overflow: hidden;
   z-index: 5;
-  
+  cursor: grab;
+  user-select: none;
+  -webkit-user-select: none;
   mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
   -webkit-mask-image: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
 }
@@ -102,23 +103,27 @@
 
 .hero-carousel-item.bg-item {
   background: transparent;
-  border-color: #000;
-  color: #000;
+  border-color: #2C3E50;
+  color: #2C3E50;
 }
 
 .dark-mode .hero-carousel-item.bg-item {
-  border-color: #FFFFF0;
-  color: #FFFFF0;
+  border-color: #E0E0E0;
+  color: #E0E0E0;
+}
+
+.hero-carousel-container.is-dragging {
+  cursor: grabbing;
+}
+
+.hero-carousel-container.is-dragging .hero-carousel-item {
+  pointer-events: none;
 }
 
 .hero-carousel-track {
   display: flex;
   width: max-content;
-  animation: scroll 60s linear infinite;
-}
-
-.hero-carousel-track:hover {
-  animation-play-state: paused;
+  will-change: transform;
 }
 
 .hero-carousel-item {
@@ -126,8 +131,8 @@
   height: 200px;
   flex-shrink: 0;
   margin-right: 24px;
-  background: #fafaec;
-  border: 1px solid #C0C0C0;
+  background: #FFFFFF;
+  border: 1px solid #DEE2E6;
   border-radius: 8px;
   display: flex;
   flex-direction: column;
@@ -138,19 +143,19 @@
 }
 
 .dark-mode .hero-carousel-item {
-  background: #22252B;
+  background: #1E1E1E;
   border-color: #333333;
 }
 
 .hero-carousel-item:hover {
   transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(46, 125, 50, 0.15);
-  background: #eeeee0;
+  box-shadow: 0 10px 20px rgba(255, 177, 0, 0.15);
+  background: #F0F1F3;
   border-color: var(--accent-color);
 }
 
 .dark-mode .hero-carousel-item:hover {
-  background: #2F3943;
+  background: #2A2A2A;
   box-shadow: 0 10px 20px rgba(0,0,0,0.3);
 }
 
@@ -165,17 +170,17 @@
 
 .specimen-name {
   font-weight: 600;
-  color: #333333;
+  color: #2C3E50;
   font-size: 0.9rem;
 }
 
 .dark-mode .specimen-name {
-  color: #FFFFF0;
+  color: #E0E0E0;
 }
 
 .specimen-order {
   font-size: 0.7rem;
-  color: #555555;
+  color: #5F6368;
   background: rgba(0,0,0,0.05);
   padding: 4px 8px;
   border-radius: 12px;
@@ -183,17 +188,9 @@
 
 .dark-mode .specimen-order {
   background: rgba(255,255,255,0.1);
-  color: #FFFFF0;
+  color: #A0A0A0;
 }
 
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-25%);
-  }
-}
 
 .hero-actions {
   display: flex;
@@ -204,8 +201,8 @@
 }
 
 .btn-primary {
-  background: #000000;
-  border: 1px solid #000000;
+  background: #2C3E50;
+  border: 1px solid #2C3E50;
   color: #FFFFFF;
   padding: 12px 24px;
   font-size: 0.875rem;
@@ -218,26 +215,26 @@
 }
 
 .btn-primary:hover {
-  background: #333333;
-  border-color: #333333;
-  color: #FFFFF0;
+  background: #3A4F63;
+  border-color: #3A4F63;
+  color: #F8F9FA;
 }
 
 .dark-mode .btn-primary {
-  background: #FFFFF0;
-  border-color: #FFFFF0;
-  color: #000000;
+  background: #E0E0E0;
+  border-color: #E0E0E0;
+  color: #121212;
 }
 
 .dark-mode .btn-primary:hover {
-  background: #ddddd1;
-  border-color: #ddddd1;
+  background: #C8C8C8;
+  border-color: #C8C8C8;
 }
 
 .btn-secondary {
   background: transparent;
-  border: 1px solid #E5E5E5;
-  color: #000000;
+  border: 1px solid #DEE2E6;
+  color: #2C3E50;
   padding: 12px 24px;
   font-size: 0.875rem;
   font-weight: 500;
@@ -249,26 +246,26 @@
 }
 
 .btn-secondary:hover {
-  background: #F5F5F5;
-  border-color: #D0D0D0;
-  color: #000000;
+  background: #F0F1F3;
+  border-color: #CED4DA;
+  color: #2C3E50;
 }
 
 .dark-mode .btn-secondary {
   border-color: #333333;
-  color: #FFFFF0;
+  color: #E0E0E0;
 }
 
 .dark-mode .btn-secondary:hover {
-  background: #1a1a1a;
+  background: #1E1E1E;
   border-color: #444444;
-  color: #FFFFF0;
+  color: #E0E0E0;
 }
 
 @media (max-width: 768px) {
   .hero-section {
-    margin-left: 60px;
-    padding: 60px 20px;
+    margin-left: 0;
+    padding: 40px 20px 100px;
   }
 
   .hero-content h1 {
@@ -296,6 +293,5 @@
   .hero-content h1 {
     font-size: 1.75rem;
   }
-
 
 }
