@@ -1,76 +1,67 @@
-# 🐜 Sistema Público de Entomología (Vanilla JS Edition)
+# Sistema Público de Entomología
 
-Plataforma web interactiva para la exploración, consulta y gestión de la colección entomológica y fichas técnicas de especímenes. 
+Aplicación web para explorar y consultar la colección de especímenes entomológicos y sus fichas técnicas.
 
-Migrada completamente a **HTML5, CSS3 moderno y Vanilla JavaScript ES6+**, libre de frameworks o librerías pesadas, priorizando velocidad, ligereza y diseño adaptable con tema Nord.
-
----
-
-## 🎨 Características Principales
-
-- **⚡ 100% Vanilla Web:** Desarrollado sin frameworks de JavaScript (React/Vue/Angular), garantizando renderizado ultra-rápido e inmediatez.
-- **🎨 Sistema de Temas Nord:**
-  - **Modo Claro Botánico/Cálido:** Inspirado en papelería de museo/laboratorio entomológico (`#F4F6F0`) con acentos verde sabio (`nord14` - `#A3BE8C`).
-  - **Modo Oscuro Nord:** Basado en los tonos oscuros de la paleta oficial Nord (`nord0` - `#2E3440` a `nord3` - `#4C566A`).
-  - Alternancia dinámica e instantánea con persistencia en `localStorage`.
-- **🐞 Navegación SPA por Hash:** Enrutamiento ligero (`#/`, `#/gallery`, `#/library`) sin recargas de página.
-- **🖼️ Carrusel Continuo Hero:** Exposición infinita e interactiva de especímenes destacados.
-- **📚 Biblioteca de Fichas Técnicas:** Tarjetas interactivas con sombras suaves de elevación, nombres científicos, identificadores y estado del espécimen.
-- **🔍 Galería y Filtros en Tiempo Real:** Búsqueda en tiempo real y filtrado por orden taxonómico.
-- **🔬 Visor Modal de Detalle de Espécimen:** Ficha detallada con datos taxonómicos completos, código de barras y pestañas descriptivas.
+Esta versión está construida enteramente en **HTML, CSS y JavaScript Vanilla (ES6+)**, sin frameworks ni dependencias externas. Se diseñó enfocada en la ligereza, carga instantánea y una paleta visual basada en **Nord**.
 
 ---
 
-## 📁 Estructura del Proyecto
+## 🍃 Lo más destacado
+
+- **Sin frameworks:** Hecho a mano con JS nativo. Carga al instante sin procesos de build ni paquetes pesados.
+- **Tema Nord adaptable:**
+  - **Modo Claro (Cálido/Botánico):** Fondo suave tono marfil (`#F4F6F0`) con acentos verde sabio (`#A3BE8C`), pensado para simular papelería de laboratorio o museo.
+  - **Modo Oscuro:** Paleta Nord pura (`#2E3440`).
+  - Cambia en un clic y recuerda tu preferencia automáticamente.
+- **Navegación fluida (SPA):** Cambios de sección por hash (`#/`, `#/gallery`, `#/library`) sin recargar la página.
+- **Muestra interactiva:** Carrusel continuo en la portada y tarjetas de especímenes con sombras suaves.
+- **Fichas y búsqueda:** Búsqueda rápida por orden taxonómico y un modal para revisar los detalles completos de cada insecto.
+
+---
+
+## 📁 Estructura del proyecto
 
 ```text
 Vanilla/
-├── assets/
-│   └── favicon.svg           # Icono de la aplicación
-├── css/
-│   ├── index.css             # Estilos globales y tokens Nord (:root)
-│   ├── sidebar.css           # Estilos de barra lateral y cambio de tema
-│   ├── hero.css              # Estilos de sección hero y carrusel infinito
-│   ├── gallery.css           # Estilos de la galería interactiva
-│   ├── library.css           # Estilos de la biblioteca de fichas técnicas
-│   └── specimen-detail.css   # Estilos del visor modal de detalles
-├── js/
-│   ├── app.js                # Enrutador cliente y ciclo de vida SPA
-│   ├── data.js               # Dataset de especímenes entomológicos
-│   ├── theme.js              # Controlador del tema claro/oscuro Nord
-│   ├── components/
-│   │   ├── sidebar.js        # Componente de navegación lateral
-│   │   └── specimen-detail.js# Componente de modal detallado
-│   └── pages/
-│       ├── hero.js           # Vista principal hero
-│       ├── gallery.js        # Vista de galería
-│       └── library.js        # Vista de biblioteca
-├── svgs/                     # Iconografía vectorial
-└── index.html                # Punto de entrada HTML5
+├── index.html                # Punto de entrada principal
+├── assets/                   # Favicon e imágenes base
+├── svgs/                     # Iconos vectoriales
+├── css/                      # Hojas de estilo modulares
+│   ├── index.css             # Estilos globales y variables de color
+│   ├── sidebar.css           # Navegación y selector de tema
+│   ├── hero.css              # Portada y carrusel
+│   ├── gallery.css           # Galería interactiva
+│   ├── library.css           # Catálogo de fichas técnicas
+│   └── specimen-detail.css   # Modal de detalle de espécimen
+└── js/                       # Lógica en JS Vanilla (Módulos ES)
+    ├── app.js                # Enrutador cliente y arranque
+    ├── data.js               # Información de los especímenes
+    ├── theme.js              # Manejo del tema claro/oscuro
+    ├── components/           # Componentes reutilizables (sidebar, modal)
+    └── pages/                # Vistas principales (hero, gallery, library)
 ```
 
 ---
 
-## 🚀 Ejecución Local
+## 🚀 Cómo probarlo localmente
 
-No requiere comandos de instalación ni dependencias de `node_modules`. Puedes ejecutar la aplicación de las siguientes formas:
+No hace falta instalar nada con `npm` ni configurar entornos complejos:
 
-### Opción 1: Directamente desde el navegador
-Abre el archivo `Vanilla/index.html` en cualquier navegador web moderno (Chrome, Edge, Firefox, Safari).
+1. **Directo en el navegador:**  
+   Basta con abrir el archivo `Vanilla/index.html` en Chrome, Firefox, Edge o Safari.
 
-### Opción 2: Servidor estático local (opcional)
-Con Python instalado, puedes ejecutar un servidor HTTP rápido:
+2. **Con un servidor local de Python (opcional):**  
+   Si prefieres servirlo mediante un servidor local, abre la terminal en la raíz y ejecuta:
 
-```bash
-# Desde la carpeta raíz del proyecto:
-python -m http.server 8000
-```
-Y abre en tu navegador: `http://localhost:8000/Vanilla/`
+   ```bash
+   python -m http.server 8000
+   ```
+   Luego ingresa a `http://localhost:8000/Vanilla/` en tu navegador.
 
 ---
 
-## 🛠️ Tecnologías
+## 🛠️ Tecnologías utilizadas
 
-- **HTML5:** Estructuración semántica y accesible.
-- **CSS3:** Variables CSS (`:root`), Flexbox, CSS Grid y animaciones personalizadas.
-- **JavaScript (ES6+):** Módulos nativos (`import`/`export`), manipulación eficiente del DOM y eventos nativos.
+- **HTML5:** Marcado semántico.
+- **CSS3:** Flexbox, CSS Grid y variables nativas (`:root`).
+- **JavaScript ES6+:** Módulos JS nativos (`import`/`export`) y manipulación directa del DOM.
