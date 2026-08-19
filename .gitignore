@@ -1,0 +1,15 @@
+# Antigravity agent & CLI metadata
+.agents/
+.gemini/
+.system_generated/
+skills-lock.json
+
+# Implementation plan docs
+HABILIDADES.md
+PLAN_IMPLEMENTACION.md
+REQUERIMIENTOS_MIGRACION_VANILLA.md
+
+# OS & Environment temporary files
+.DS_Store
+Thumbs.db
+*.log
