@@ -1,0 +1,222 @@
+export const specimens = [
+  { 
+    id: 'SPECIMEN_001', 
+    commonName: 'Escarabajo Rinoceronte', 
+    scientificName: 'Dynastes hercules', 
+    family: 'Scarabaeidae', 
+    order: 'Coleoptera', 
+    state: 'Veracruz', 
+    status: 'PUBLIC_RELEASE',
+    date: '2023-05-12',
+    collector: 'Juan Pérez'
+  },
+  { 
+    id: 'SPECIMEN_002', 
+    commonName: 'Mariposa Monarca', 
+    scientificName: 'Danaus plexippus', 
+    family: 'Nymphalidae', 
+    order: 'Lepidoptera', 
+    state: 'Michoacán', 
+    status: 'PUBLIC_RELEASE',
+    date: '2023-11-20',
+    collector: 'María González'
+  },
+  { 
+    id: 'SPECIMEN_003', 
+    commonName: 'Abeja Melífera', 
+    scientificName: 'Apis mellifera', 
+    family: 'Apidae', 
+    order: 'Hymenoptera', 
+    state: 'Jalisco', 
+    status: 'PUBLIC_RELEASE',
+    date: '2024-02-15',
+    collector: 'Pedro Sánchez'
+  },
+  { 
+    id: 'SPECIMEN_004', 
+    commonName: 'Grillo de Campo', 
+    scientificName: 'Gryllus campestris', 
+    family: 'Gryllidae', 
+    order: 'Orthoptera', 
+    state: 'Puebla', 
+    status: 'PUBLIC_RELEASE', 
+    date: '2024-01-10',
+    collector: 'Ana López'
+  },
+  { 
+    id: 'SPECIMEN_005', 
+    commonName: 'Mantis Religiosa', 
+    scientificName: 'Mantis religiosa', 
+    family: 'Mantidae', 
+    order: 'Mantodea', 
+    state: 'Yucatán', 
+    status: 'PUBLIC_RELEASE',
+    date: '2023-08-05',
+    collector: 'Carlos Ruiz'
+  },
+  { 
+    id: 'SPECIMEN_006', 
+    commonName: 'Libélula Común', 
+    scientificName: 'Anax junius', 
+    family: 'Aeshnidae', 
+    order: 'Odonata', 
+    state: 'Quintana Roo', 
+    status: 'PUBLIC_RELEASE',
+    date: '2023-09-30',
+    collector: 'Sofía Díaz'
+  },
+  { 
+    id: 'SPECIMEN_007', 
+    commonName: 'Cchinche Besucona', 
+    scientificName: 'Triatoma infestans', 
+    family: 'Reduviidae', 
+    order: 'Hemiptera', 
+    state: 'Oaxaca', 
+    status: 'PUBLIC_RELEASE',
+    date: '2023-07-18',
+    collector: 'Miguel Ángel'
+  },
+  { 
+    id: 'SPECIMEN_008', 
+    commonName: 'Mosca de la Fruta', 
+    scientificName: 'Ceratitis capitata', 
+    family: 'Tephritidae', 
+    order: 'Diptera', 
+    state: 'Chiapas', 
+    status: 'CAPTURED',
+    date: '2024-03-01',
+    collector: 'Luis Torres'
+  },
+  { 
+    id: 'SPECIMEN_009', 
+    commonName: 'Hormiga Arriera', 
+    scientificName: 'Atta mexicana', 
+    family: 'Formicidae', 
+    order: 'Hymenoptera', 
+    state: 'Guanajuato', 
+    status: 'PUBLIC_RELEASE',
+    date: '2023-06-22',
+    collector: 'Elena Gómez'
+  },
+  { 
+    id: 'SPECIMEN_010', 
+    commonName: 'Saltamontes', 
+    scientificName: 'Schistocerca nitens', 
+    family: 'Acrididae', 
+    order: 'Orthoptera', 
+    state: 'Sonora', 
+    status: 'PUBLIC_RELEASE',
+    date: '2023-10-12',
+    collector: 'Roberto Fernández'
+  },
+  { 
+    id: 'SPECIMEN_011', 
+    commonName: 'Escarabajo Rinoceronte', 
+    scientificName: 'Dynastes hercules', 
+    family: 'Scarabaeidae', 
+    order: 'Coleoptera', 
+    state: 'Veracruz', 
+    status: 'PUBLIC_RELEASE',
+    date: '2023-05-12',
+    collector: 'Juan Pérez'
+  },
+  { 
+    id: 'SPECIMEN_012', 
+    commonName: 'Mariposa Monarca', 
+    scientificName: 'Danaus plexippus', 
+    family: 'Nymphalidae', 
+    order: 'Lepidoptera', 
+    state: 'Michoacán', 
+    status: 'PUBLIC_RELEASE',
+    date: '2023-11-20',
+    collector: 'María González'
+  },
+  { 
+    id: 'SPECIMEN_013', 
+    commonName: 'Abeja Melífera', 
+    scientificName: 'Apis mellifera', 
+    family: 'Apidae', 
+    order: 'Hymenoptera', 
+    state: 'Jalisco', 
+    status: 'PUBLIC_RELEASE',
+    date: '2024-02-15',
+    collector: 'Pedro Sánchez'
+  },
+  { 
+    id: 'SPECIMEN_014', 
+    commonName: 'Grillo de Campo', 
+    scientificName: 'Gryllus campestris', 
+    family: 'Gryllidae', 
+    order: 'Orthoptera', 
+    state: 'Puebla', 
+    status: 'VALIDATED', 
+    date: '2024-01-10',
+    collector: 'Ana López'
+  },
+  { 
+    id: 'SPECIMEN_015', 
+    commonName: 'Mantis Religiosa', 
+    scientificName: 'Mantis religiosa', 
+    family: 'Mantidae', 
+    order: 'Mantodea', 
+    state: 'Yucatán', 
+    status: 'PUBLIC_RELEASE',
+    date: '2023-08-05',
+    collector: 'Carlos Ruiz'
+  },
+  { 
+    id: 'SPECIMEN_016', 
+    commonName: 'Libélula Común', 
+    scientificName: 'Anax junius', 
+    family: 'Aeshnidae', 
+    order: 'Odonata', 
+    state: 'Quintana Roo', 
+    status: 'PUBLIC_RELEASE',
+    date: '2023-09-30',
+    collector: 'Sofía Díaz'
+  },
+  { 
+    id: 'SPECIMEN_017', 
+    commonName: 'Cchinche Besucona', 
+    scientificName: 'Triatoma infestans', 
+    family: 'Reduviidae', 
+    order: 'Hemiptera', 
+    state: 'Oaxaca', 
+    status: 'PUBLIC_RELEASE',
+    date: '2023-07-18',
+    collector: 'Miguel Ángel'
+  },
+  { 
+    id: 'SPECIMEN_018', 
+    commonName: 'Mosca de la Fruta', 
+    scientificName: 'Ceratitis capitata', 
+    family: 'Tephritidae', 
+    order: 'Diptera', 
+    state: 'Chiapas', 
+    status: 'CAPTURED',
+    date: '2024-03-01',
+    collector: 'Luis Torres'
+  },
+  { 
+    id: 'SPECIMEN_019', 
+    commonName: 'Hormiga Arriera', 
+    scientificName: 'Atta mexicana', 
+    family: 'Formicidae', 
+    order: 'Hymenoptera', 
+    state: 'Guanajuato', 
+    status: 'PUBLIC_RELEASE',
+    date: '2023-06-22',
+    collector: 'Elena Gómez'
+  },
+  { 
+    id: 'SPECIMEN_020', 
+    commonName: 'Saltamontes', 
+    scientificName: 'Schistocerca nitens', 
+    family: 'Acrididae', 
+    order: 'Orthoptera', 
+    state: 'Sonora', 
+    status: 'VALIDATED',
+    date: '2023-10-12',
+    collector: 'Roberto Fernández'
+  }
+];

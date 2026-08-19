@@ -1,0 +1,235 @@
+.left-sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  width: 80px;
+  background: #EAECE6;
+  border-right: 1px solid var(--nord4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 24px 0;
+  z-index: 100;
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.theme-toggle {
+  position: absolute;
+  bottom: 24px;
+}
+
+.dark-mode .left-sidebar {
+  background: var(--nord1);
+  border-right: 1px solid var(--nord3);
+}
+
+.sidebar-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.sidebar-nav li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  color: var(--nord1);
+  transition: all 0.2s ease;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  background: #F4F6F0;
+  color: var(--nord0);
+}
+
+.dark-mode .nav-link:hover {
+  background: var(--nord2);
+  color: var(--nord6);
+}
+
+.nav-link.active {
+  background: var(--nord14);
+  color: var(--nord0);
+  font-weight: 600;
+}
+
+.dark-mode .nav-link.active {
+  background: var(--nord8);
+  color: var(--nord0);
+}
+
+.nav-link img {
+  width: 24px;
+  height: 24px;
+  filter: invert(15%);
+  transition: all 0.2s ease;
+  opacity: 0.7;
+}
+
+.nav-link:hover img {
+  filter: invert(0%);
+  opacity: 1;
+}
+
+.nav-link.active img {
+  filter: invert(15%);
+  opacity: 1;
+}
+
+.dark-mode .nav-link img {
+  filter: invert(85%);
+  opacity: 0.7;
+}
+
+.dark-mode .nav-link:hover img {
+  filter: invert(100%);
+  opacity: 1;
+}
+
+.dark-mode .nav-link.active img {
+  filter: invert(15%);
+  opacity: 1;
+}
+
+.theme-toggle {
+  display: flex;  
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  border: none;
+  background: transparent;
+  color: var(--nord0);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.theme-toggle:hover {
+  background: var(--nord5);
+}
+
+.dark-mode .theme-toggle:hover {
+  background: var(--nord2);
+}
+
+.theme-icon {
+  width: 24px;
+  height: 24px;
+  filter: invert(15%);
+  transition: all 0.2s ease;
+  opacity: 0.85;
+}
+
+.theme-toggle:hover .theme-icon {
+  filter: invert(0%);
+  opacity: 1;
+}
+
+.dark-mode .theme-icon {
+  filter: invert(85%);
+  opacity: 0.7;
+}
+
+.dark-mode .theme-toggle:hover .theme-icon {
+  filter: invert(100%);
+  opacity: 1;
+}
+
+@media (max-width: 1000px) {
+  .left-sidebar {
+    width: 60px;
+  }
+
+  .nav-link {
+    width: 40px;
+    height: 40px;
+  }
+
+  .nav-link img {
+    width: 20px;
+    height: 20px;
+  }
+
+  .theme-toggle {
+    width: 40px;
+    height: 40px;
+  }
+
+  .theme-icon {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+[data-tooltip]:not(.theme-toggle) {
+  position: relative;
+}
+
+[data-tooltip]::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  left: 0; 
+  top: 100%;
+  transform: translateY(4px);
+  background: var(--nord0);
+  color: var(--nord6);
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  margin-top: 8px;
+}
+
+@keyframes tooltipTimedSidebar {
+    0% { opacity: 0; visibility: hidden; }
+    10% { opacity: 1; visibility: visible; }
+    85% { opacity: 1; visibility: visible; }
+    100% { opacity: 0; visibility: hidden; }
+}
+
+[data-tooltip]:hover::after {
+  animation: tooltipTimedSidebar 2s ease forwards;
+  transform: translateY(0);
+}
+
+.theme-toggle[data-tooltip]::after {
+  top: auto;
+  bottom: 100%;
+  margin-top: 0;
+  margin-bottom: 8px;
+  transform: translateY(-4px);
+}
+
+.theme-toggle[data-tooltip]:hover::after {
+  transform: translateY(0);
+  animation: tooltipTimedSidebar 2s ease forwards;
+}
+
+.dark-mode [data-tooltip]::after {
+  background: var(--nord5);
+  color: var(--nord0);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
