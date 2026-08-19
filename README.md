@@ -6,7 +6,7 @@ Esta versión está construida enteramente en **HTML, CSS y JavaScript Vanilla (
 
 ---
 
-## 🍃 Lo más destacado
+## Lo más destacado
 
 - **Sin frameworks:** Hecho a mano con JS nativo. Carga al instante sin procesos de build ni paquetes pesados.
 - **Tema Nord adaptable:**
@@ -19,7 +19,7 @@ Esta versión está construida enteramente en **HTML, CSS y JavaScript Vanilla (
 
 ---
 
-## 📁 Estructura del proyecto
+## Estructura del proyecto
 
 ```text
 Vanilla/
@@ -43,7 +43,7 @@ Vanilla/
 
 ---
 
-## 🚀 Cómo probarlo localmente
+## Cómo probarlo localmente
 
 No hace falta instalar nada con `npm` ni configurar entornos complejos:
 
@@ -60,7 +60,7 @@ No hace falta instalar nada con `npm` ni configurar entornos complejos:
 
 ---
 
-## 🛠️ Tecnologías utilizadas
+## Tecnologías utilizadas
 
 - **HTML5:** Marcado semántico.
 - **CSS3:** Flexbox, CSS Grid y variables nativas (`:root`).
